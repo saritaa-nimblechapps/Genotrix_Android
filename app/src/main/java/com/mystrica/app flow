@@ -1,0 +1,21 @@
+//run test flow
+
+ User id get
+ run test | run qc | settings
+ Test Sub type  ( saliva etc..)
+ scan patient id
+ scan regent id
+ connect blu
+ sample drop screen
+ graph
+ result (with graph)
+
+
+
+// run qc flow
+
+    user id
+    connection  -- check if connect blue or not
+    in graph view bottom of the progress and data timer run with the 5 mint, after complete 5 mint than than set one flag for qc is ok
+
+

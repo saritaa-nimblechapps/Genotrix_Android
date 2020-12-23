@@ -1,0 +1,155 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/myst_white">
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/round_blue"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtsetLed"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Set Led"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+
+        <TextView
+            android:id="@+id/txtSetCalibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Calibrate"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+        <TextView
+            android:id="@+id/txtNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Notfification Enable"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+        <TextView
+            android:id="@+id/txtDisableNotication"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Notfification Disable"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+        <TextView
+            android:id="@+id/txtReadValue"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Read value"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+        <TextView
+            android:id="@+id/txtPwmValue"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="PWM"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+        <TextView
+            android:id="@+id/txtCurrentvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Current"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+
+
+
+        <TextView
+            android:id="@+id/txtAddRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Add Record"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+        <TextView
+            android:id="@+id/txtViewRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="View Record"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

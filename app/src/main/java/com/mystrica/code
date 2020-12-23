@@ -1,0 +1,426 @@
+//timer code
+//    private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            Bundle extras  = intent.getExtras();
+//
+//            if(extras.containsKey("code")){
+//                cdt = new CountDownTimer(maxTimeInMilliseconds, interval) {
+//
+//                    public void onTick(long millisUntilFinished) {
+//
+//                        String data= (String) extras.get("data");
+//
+//                        Log.d("Brodcast start :", "Brodcast on =>"+data.toString());
+//                    }
+//
+//                    public void onFinish() {
+//                        Log.d("Brodcast","00:00:00");
+//                    }
+//
+//                }
+//                        .start();
+//
+//            }
+//            else
+//            {
+//                if(cdt != null)
+//                    cdt.cancel();
+//            }
+//        }
+//    };
+
+
+
+
+//code for home adpter
+
+--  1
+//                            String strprefDate=utils.pref_get_String(Constant.strDate,context);
+//
+//                            if(strprefDate.equals("") || strprefDate.equals(null)){
+//                                Toast.makeText(context," Date with no value",Toast.LENGTH_LONG).show();
+//                            }
+//                            else{
+//                                Log.i("home","pref date :"+strprefDate+"----- Today date :"+today);
+//
+//                                    Date prefDate=Utils.stringToDate(strprefDate);
+//
+//                                    if(toTodayDate.equals(prefDate))
+//                                    {
+//                                        if(ocCounter>0)
+//                                        {
+//                                            //check for permission
+//                                            ((HomeFragment)fragment).checkHomePermission(homeDataDO.getTitle());
+//                                        }
+//                                        else{
+//                                            Toast.makeText(context,"First qc use ",Toast.LENGTH_LONG).show();
+//                                        }
+//                                    }
+//                                    else {
+//                                        ocCounter=0;
+//                                        strprefDate="";
+//                                        utils.pref_set_int(Constant.qcCounter,ocCounter,context);
+//                                        utils.pref_set_String(Constant.strDate,strprefDate,context);
+//                                        Toast.makeText(context,"First qc use ",Toast.LENGTH_LONG).show();
+//                                    }
+//                            }
+
+
+
+---2  set with working
+
+ if (getClickTag.equals("Run Test")) {
+
+                            if (ocCounter > 0) {
+                                String strprefDate = utils.pref_get_String(Constant.strDate, context);
+                                if (strprefDate.equals("") || strprefDate.equals(null)) {
+                                    Toast.makeText(context, "First qc use", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Date prefDate = Utils.stringToDate(strprefDate);
+                                    if (toTodayDate.equals(prefDate)) {
+                                        //check for permission
+                                        ((HomeFragment) fragment).checkHomePermission(homeDataDO.getTitle());
+                                    } else {
+                                        Toast.makeText(context, "First qc use", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            } else {
+                                Toast.makeText(context, "First qc use", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                        else {
+
+                            //if tag is qc test than go inside the qc test
+                            ((HomeFragment) fragment).checkHomePermission(homeDataDO.getTitle());
+                        }
+
+
+//result set with counter and date code (resutlFragment next button click code)
+  int ocCounter=utils.pref_get_int(Constant.qcCounter,getContext());
+                String todayDate=TodayDate();
+
+                int updateQcCounter=0;
+                if(ocCounter==0){
+                    updateQcCounter=ocCounter+1;
+                    //temp to store beofore date of today date
+                    Date toDay=stringToDate(todayDate);
+
+
+//                    Date beforedate=getMeYesterday();
+//                    SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
+//                     String strprevious = df.format(beforedate);
+//
+//                    utils.pref_set_String(Constant.strDate,strprevious,getContext());
+
+
+                    utils.pref_set_String(Constant.strDate,todayDate,getContext());
+                }
+                else{
+
+                    String strprefDate=utils.pref_get_String(Constant.strDate,getContext());
+                    Date prefDate=Utils.stringToDate(strprefDate);
+                    Date toTodayDate=Utils.stringToDate(todayDate);
+
+                    if(!(strprefDate.equals("")) || !(strprefDate.equals(null)))
+                    {
+                        if(toTodayDate.equals(prefDate)){
+                            updateQcCounter=ocCounter+1;
+                        }else{
+                            ocCounter=0;
+                            updateQcCounter=ocCounter+1;
+                            strprefDate=todayDate;
+                            utils.pref_set_int(Constant.qcCounter,ocCounter,getContext());
+                            utils.pref_set_String(Constant.strDate,strprefDate,getContext());
+                        }
+                    }
+
+
+                }
+
+
+                //store in pref.
+                utils.pref_set_int(Constant.qcCounter,updateQcCounter,getContext());
+
+
+
+
+//graph sample code (collectsampleFragment code)
+ //graph sample code
+    public void renderData() {
+        YAxis leftAxis = mChart.getAxisLeft();
+        leftAxis.removeAllLimitLines();
+//        leftAxis.addLimitLine(ll1);
+//        leftAxis.addLimitLine(ll2);
+        leftAxis.setAxisMaximum(600f);
+        leftAxis.setAxisMinimum(0f);
+        leftAxis.enableGridDashedLine(10f, 10f, 0f);
+        leftAxis.setDrawZeroLine(false);
+        leftAxis.setDrawLimitLinesBehindData(false);
+
+        mChart.getAxisRight().setEnabled(false);
+        setData();
+    }
+
+    private void setData() {
+
+        ArrayList<Entry> values = new ArrayList<>();
+        values.add(new Entry(1, 50));
+        values.add(new Entry(2, 100));
+        values.add(new Entry(3, 80));
+        values.add(new Entry(4, 120));
+        values.add(new Entry(5, 110));
+        values.add(new Entry(7, 150));
+        values.add(new Entry(8, 250));
+        values.add(new Entry(9, 190));
+
+        LineDataSet set1;
+        if (mChart.getData() != null &&
+                mChart.getData().getDataSetCount() > 0) {
+            set1 = (LineDataSet) mChart.getData().getDataSetByIndex(0);
+            set1.setValues(values);
+            mChart.getData().notifyDataChanged();
+            mChart.notifyDataSetChanged();
+        } else {
+            set1 = new LineDataSet(values, "Sample Data");
+            set1.setDrawIcons(false);
+            set1.enableDashedLine(10f, 5f, 0f);
+            set1.enableDashedHighlightLine(10f, 5f, 0f);
+            set1.setColor(Color.DKGRAY);
+            set1.setCircleColor(Color.DKGRAY);
+            set1.setLineWidth(1f);
+            set1.setCircleRadius(3f);
+            set1.setDrawCircleHole(false);
+            set1.setValueTextSize(9f);
+            set1.setDrawFilled(true);
+            set1.setFormLineWidth(1f);
+            set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
+            set1.setFormSize(15.f);
+
+
+            Drawable drawable = ContextCompat.getDrawable(getContext(), R.drawable.fade_blue);
+            set1.setFillDrawable(drawable);
+
+//            if (Utils.getSDKInt() >= 18) {
+//                Drawable drawable = ContextCompat.getDrawable(this, R.drawable.fade_blue);
+//                set1.setFillDrawable(drawable);
+//            } else {
+//                set1.setFillColor(Color.DKGRAY);
+//            }
+            ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+            dataSets.add(set1);
+            LineData data = new LineData(dataSets);
+            mChart.setData(data);
+
+        }
+    }
+
+
+//testing code use for graph and covert code
+ public static String convertDecimalToBinary(int N) {
+
+        StringBuilder binary = new StringBuilder(32);
+
+        while (N > 0) {
+            binary.append(N % 2);
+            N >>= 1;
+        }
+
+        return binary.reverse().toString();
+
+    }
+
+    public static long getUnsignedInt(int x) {
+        return x & 0x00000000ffffffffL;
+    }
+
+      private void findMaxMin(List<Integer> xaxi) {
+            int max = maxValue(xaxi);
+            // yaxisUpdate(max,0);;
+            Log.i("xaxi", "value of max =>" + max);
+        }
+
+            public int maxValue(List<Integer> array) {
+                List<Integer> list = new ArrayList<Integer>();
+                for (int i = 0; i < array.size(); i++) {
+                    list.add(array.get(i));
+                }
+                return Collections.max(list);
+            }
+
+
+//3 nov 2020 build code
+// home button press code
+====================
+when home click all values destroy and blank and go to user id get page .
+====================
+
+private  void callHomeDashboard(){
+
+        DashboardActivity.communicator.connectToDevice(null);
+        DashboardActivity.firstResult=false;
+        DashboardActivity.firstResultValue="";
+
+        strPatinetId="";
+        strUserId="";
+        strRegentId="";
+        selectTest="";
+        selectSubTest="";
+
+//        if(CollectSampleFragment.isCalibrated){
+//        }
+
+        countDownTimer.cancel();
+
+        FragmentManager fm = getSupportFragmentManager();
+        for (int i = 0; i < fm.getBackStackEntryCount(); ++i) {
+            fm.popBackStack();
+        }
+
+        visibleBackButton();
+//        HeadetTitle(getResources().getString(R.string.home));
+//        homeFragment=new HomeFragment();
+
+//        connectFragment=new ConnectBluetothFragment("Connect Device");
+//        setupFragment(connectFragment);
+
+        Intent callGetUserId=new Intent(getApplicationContext(), CoverActivity.class);
+        callGetUserId.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        callGetUserId.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK );
+        startActivity(callGetUserId);
+        finish();
+    }
+
+//on discoverd update in 4 dec
+
+
+    public void onServicesDiscovered(BluetoothGatt gatt, int status) {
+        Log.wtf("tesst", "Services discovered status: " + status);
+
+        if (status == BluetoothGatt.GATT_SUCCESS) {
+
+            mystService = gatt.getService(MY_TEST_SERVICE_UUID);
+
+            testCommontCharacteristic = mystService.getCharacteristic(MYSTERIA_CHARACTERISTIC_TEST_UUID);
+
+            if (testCommontCharacteristic != null) {
+
+
+                int i = testCommontCharacteristic.getPermissions();
+                setIRGreenLed();
+            }
+
+            //printGattTable(mystService,gatt);
+//
+//            String name;
+//
+//            Log.e("service called", "=>" + mystService.getUuid().toString());
+//            if (mystService != null) {
+//                this.status= "success";
+//                name = "Mysteria";
+////                gatt_discoverd=gatt;
+//                batteryCharacteristic = mystService.getCharacteristic(HARDWARE_BATTERY_UUID);
+//                testCommontCharacteristic = mystService.getCharacteristic(MYSTERIA_CHARACTERISTIC_TEST_UUID);
+//
+//
+//
+//                name = "Mysteria Battery";
+//                if (batteryCharacteristic != null) {
+//                    setNotiificationsOnCharacteristic(gatt, batteryCharacteristic, name);
+//
+//                    updateReadingType(listener.getReadingType());
+//                    updateColour(listener.getColour());
+//                }
+//                name = "Mysteria test on service discoverd";
+//                if(testCommontCharacteristic!= null){
+//                    setNotiificationsOnCharacteristic(gatt,testCommontCharacteristic,name);
+//
+//                    updateReadingType(listener.getReadingType());
+//                    updateColour(listener.getColour());
+//                }
+//
+//
+//
+//
+//
+//            }
+//            else if(status == BluetoothGatt.GATT_FAILURE){
+//                Log.e(TAG, "Failure for service connected");
+//
+//            }
+//            else {
+//                Log.e(TAG, "Failed to retrieve Mysteria Service from device");
+//            }
+
+        } else {
+            Log.e(TAG, "Failed to explore remote device");
+        }
+    }
+
+
+
+// on charterstict change 4 dec
+    public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
+        Log.wtf("tesst", "onCharacteristicChanged call");
+
+        if (characteristic != null) {
+
+            if (characteristic.getUuid().equals(MYSTERIA_TEST_RSSI)) {
+
+
+//                setupBrodcastRssi(Arrays.toString(characteristic.getValue()));
+//
+                //         callCharacterstics(MYSTERIA_CHARACTERISTIC_RESILT_UUID,"Result");
+
+
+            } else if (characteristic.getUuid().equals(HARDWARE_BATTERY_UUID)) {
+
+                handler.removeCallbacks(timeoutRunnable);
+
+
+//                int format = BluetoothGattCharacteristic.FORMAT_UINT8;
+//
+//
+//                format = BluetoothGattCharacteristic.FORMAT_UINT16;
+//                int bettry_level = characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT8, 0);
+//
+//                final int valueDecimal = characteristic.getIntValue(format, VALUE_DECIMAL_OFFSET);
+//                final double reading = valueDecimal / 1000.0;
+//                listener.onReadingUpdated(reading);
+////                Log.i("tesst Battery :", "===" + reading);
+//                setupBrodcastBaterryData(reading);
+//
+                //  callCharacterstics(MYSTERIA_TEST_RSSI,"Mystrica Rssl");
+
+                handler.postDelayed(timeoutRunnable, CONNECTION_TIMEOUT);
+
+            } else if (characteristic.getUuid().equals(MYSTERIA_CHARACTERISTIC_CALIBRATE_UUID)) {
+
+
+            }
+            else if(characteristic.getUuid().equals(MYSTERIA_CHARACTERISTIC_RESILT_UUID)) {
+
+                setNotiificationsOnCharacteristic(gatt, testresultommontCharacteristic, "test result notify");
+
+                byte arrar[]=characteristic.getValue();
+                int a=characteristic.getValue().length;
+//                Log.wtf("tesst", "=============");
+//                Log.wtf("tesst", "Test result Revision String characteristic changed" + Arrays.toString(characteristic.getValue()));
+//                for(int i=0;i<a;i++){
+//                    Log.wtf("tesst", "Test result Revision String characteristic changed  == " + arrar[i]);
+//
+//                }
+//                Log.wtf("tesst", "=============");
+
+                String value = Arrays.toString(characteristic.getValue());
+
+              //  Log.wtf("tesst", "Test result Revision String characteristic changed" + value);
+
+
+                //set brodadcast
+                setUpBrodcast(Arrays.toString(characteristic.getValue()), arrar);
+//                setUpBrodcastByte(arrar);
+
+            }
+        }
+    }

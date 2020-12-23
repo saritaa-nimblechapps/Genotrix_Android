@@ -1,0 +1,156 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/myst_white">
+
+    <TextView
+        android:id="@+id/txt_type_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="title"
+        android:textColor="@color/color_blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="25dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/txt_blue_text_connecty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect Bluetoth"
+        android:hint="title"
+        android:textColor="@color/color_grey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_type_title"
+        />
+
+    <LinearLayout
+        android:id="@+id/ly_round_courner_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/txt_blue_text_connecty"
+        app:layout_constraintBottom_toTopOf="@+id/ly_pr_timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/round_blue"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_sample_list"
+            app:layout_constraintTop_toBottomOf="@+id/txt_type_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_pr_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:padding="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/ly_round_courner_container"
+        app:layout_constraintBottom_toTopOf="@+id/ly_blue_connect">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/txt_min_mints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 : 00 Min"
+                android:gravity="left"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_blue"
+                android:layout_alignParentLeft="true"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/txt_max_mint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14 Max"
+                android:gravity="right"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_blue"
+                android:layout_alignParentRight="true"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pr_collect_data"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="1dp"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/progress_border_fill"
+            />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ly_blue_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/txt_message4start"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Waiting for device response"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_blue"
+            android:paddingLeft="35dp"
+            android:visibility="gone"
+            android:paddingRight="35dp"/>
+
+        <TextView
+            android:id="@+id/txt_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Connect"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_corner_blue"
+            android:textColor="@color/myst_white"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

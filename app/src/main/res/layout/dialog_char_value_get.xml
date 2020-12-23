@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounder_corner_white">
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dialog_logout_edt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:textColorHint="@color/myst_black"
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_dialog_pwm_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@null"
+            android:hint="PWM value"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@color/myst_white"
+            android:textColor="@color/myst_black"
+            android:textSize="16sp"
+            android:paddingBottom="17dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="15dp"
+            android:includeFontPadding="true"
+            android:fontFamily="@font/roboto_medium"
+            android:singleLine = "true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <!--horizontal layout-->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:layout_below="@+id/dialog_logout_edt_title"
+        android:background="#E9EBF2"
+        android:id="@+id/view_dialog__logout_hor"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/view_dialog__logout_hor">
+
+
+        <TextView
+            android:id="@+id/txt_dialogLogout_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:padding="15dp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/color_blue"/>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#E9EBF2"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/txt_dialog_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Set"
+                android:background="@color/myst_white"
+                android:visibility="visible"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/color_blue"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:visibility="gone"
+                android:id="@+id/prg_cancel"
+                android:background="@color/myst_white"
+
+                />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

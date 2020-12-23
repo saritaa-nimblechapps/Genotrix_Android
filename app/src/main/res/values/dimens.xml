@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- generic dimensions -->
+    <dimen name="xd_view_padding_small_hor">12dp</dimen>
+    <dimen name="xd_view_padding_small_vert">12dp</dimen>
+
+    <dimen name="xd_view_padding_medium_hor">16dp</dimen>
+    <dimen name="xd_view_padding_medium_vert">16dp</dimen>
+
+    <dimen name="xd_view_padding_large_hor">20dp</dimen>
+    <dimen name="xd_view_padding_large_vert">20dp</dimen>
+
+    <dimen name="xd_view_separator">1dp</dimen>
+
+    <!-- specific dimensions -->
+
+    <dimen name="myst_view_header_bar_width">48dp</dimen>
+
+    <dimen name="myst_group_device_margin">5dp</dimen>
+
+    <dimen name="myst_view_device_padding">7dp</dimen>
+
+    <dimen name="myst_view_device_list_item_padding">15dp</dimen>
+
+    <dimen name="myst_view_tab_indicator_height">4dp</dimen>
+
+    <dimen name="myst_view_calibrate_margin">20dp</dimen>
+    <dimen name="myst_view_calibrate_padding">15dp</dimen>
+
+    <dimen name="myst_radio_button_group_colour_margin">10dp</dimen>
+
+    <dimen name="myst_radio_button_group_type_margin">37dp</dimen>
+
+    <dimen name="myst_radio_button_control_margin">10dp</dimen>
+
+    <dimen name="myst_group_capture_margin">18dp</dimen>
+    <dimen name="myst_button_capture_padding">5dp</dimen>
+    <dimen name="myst_text_view_capture_text_size">10sp</dimen>
+
+    <dimen name="myst_edit_text_note_height">40dp</dimen>
+    <dimen name="myst_edit_text_note_margin">10dp</dimen>
+
+    <dimen name="myst_button_control_vertical_padding">15dp</dimen>
+    <dimen name="myst_button_control_horizontal_padding">3dp</dimen>
+
+    <dimen name="myst_label_time_padding">5dp</dimen>
+
+    <dimen name="myst_list_item_icon_padding">7dp</dimen>
+    <dimen name="myst_list_item_icon_margin">7dp</dimen>
+    <dimen name="myst_list_item_icon_large_margin">20dp</dimen>
+
+    <dimen name="myst_graph_fragment_margin">5dp</dimen>
+
+    <dimen name="myst_view_about_margin">10dp</dimen>
+
+    <dimen name="myst_view_dialog_edit_text_small_margin">5dp</dimen>
+    <dimen name="myst_view_dialog_edit_text_margin">20dp</dimen>
+
+    <dimen name="myst_text_view_best_fit_margin">5dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

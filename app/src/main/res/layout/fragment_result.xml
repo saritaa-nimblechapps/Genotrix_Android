@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sclyforgot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myst_white"
+    android:fillViewport="true"
+    android:scrollbarThumbVertical="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/myst_white"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="15dp">
+
+        <!--        view margin set tags-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_ten_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.05"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_ninety_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.95"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_covid_txt_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_result_tilte"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:text="Covid-19"
+            android:textColor="@color/color_blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/txt_print"
+            app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
+            app:layout_constraintTop_toBottomOf="@+id/guid_covid_txt_top" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_print"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Print"
+            android:textColor="@color/color_blue_light"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_result_tilte"
+            app:layout_constraintEnd_toEndOf="@+id/guide_vertical_ninety_forgot_password"
+            app:layout_constraintTop_toTopOf="@+id/txt_result_tilte" />
+
+        <!--        date and time layouts-->
+        <LinearLayout
+            android:id="@+id/ly_opr_lab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guide_vertical_ninety_forgot_password"
+            app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
+            app:layout_constraintTop_toBottomOf="@+id/txt_result_tilte">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Date :"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_today4result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_todayTime4result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="right"
+                    android:text="2 : 05 am"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="right"
+                    android:text=": Time"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--        graph plot display value -->
+        <LinearLayout
+            android:id="@+id/ly_result_graph"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_blue"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/guide_vertical_ninety_forgot_password"
+            app:layout_constraintStart_toStartOf="@+id/guide_vertical_ten_forgot_password"
+            app:layout_constraintTop_toBottomOf="@+id/ly_opr_lab">
+
+            <FrameLayout
+                android:id="@+id/graph_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ly_sample_result_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/guide_vertical_ninety_forgot_password"
+            app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
+            app:layout_constraintTop_toBottomOf="@+id/ly_result_graph">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:text="Test Data"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/color_blue"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="10dp"
+                    android:text="Seconds"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="right"
+                    android:text="Test value"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_result4ValueSeconds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+<!--            device id details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Device Id"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_device4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+<!--            softwar version details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Software Version"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_softwareVersiond4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+<!--            user id details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="User Id"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_userid4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+<!--patient id details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Patient id"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_patinetid4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--regent id details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Regent Id"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_regentid4reslut"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <!--sample details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Sample Type"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_sub_type4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--test performed details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Test Performed"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_testPerfomed4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <!--testing date and time details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Testing Date and time "
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_test_date_time4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--qc details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="QC performed "
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_qcPerformed4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <!--qc permoed date and itme details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Last QC Date and Time"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_last_qc_time4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--reaction duration details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Reaction Duration"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_reaction_duration4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--interval details layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Intervals"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_intervals4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <!--end of process flag layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="End of Process Flag"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_process_flag4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--sample addition date and time layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Sample Addition Date and Time"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_sample_add_date_time4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <!--acquisition start date and time layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="Acquisition start date and time"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_acquisition_date_time4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--sample addition/reaction started by pressing ok layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="left"
+                    android:text="sample addition/reaction started by pressing ok"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_sample_ok_time4result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="left"
+                    android:text="12"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_grey"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guide_vertical_ninety_forgot_password"
+            app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
+            app:layout_constraintTop_toBottomOf="@+id/ly_sample_result_id">
+
+            <TextView
+                android:id="@+id/txt_new_test"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/round_corner_blue"
+                android:gravity="center_vertical"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="NEW TEST"
+                android:textAlignment="center"
+                android:textColor="@color/myst_white"
+                tools:ignore="RtlCompat" />
+
+
+
+            <TextView
+                android:id="@+id/txt_send_result"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner_blue"
+                android:gravity="center_vertical"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="SEND CSV"
+                android:textAlignment="center"
+                android:textColor="@color/myst_white"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sclyforgot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myst_white"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="15dp"
+        android:background="@color/myst_white"
+        android:animateLayoutChanges="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_ten_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.1"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_ninety_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.9"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_covid_txt_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.05"
+            android:orientation="horizontal"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.17"
+            android:orientation="horizontal"/>
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_get_id_bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="100"
+            android:orientation="horizontal"/>
+
+
+
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_email_tilte"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Covid-19"
+            android:textColor="@color/color_blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/guid_covid_txt_top"
+            app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
+            app:layout_constraintEnd_toStartOf="@+id/guide_vertical_ninety_forgot_password"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/guid_top"
+            app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
+            app:layout_constraintEnd_toStartOf="@+id/guide_vertical_ninety_forgot_password"
+            app:layout_constraintBottom_toTopOf="@+id/guid_get_id_bottom">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Id"
+                android:textColor="@color/color_grey"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:textColorHint="@color/myst_black"
+                android:background="@drawable/round_blue">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:backgroundTint="@color/myst_white"
+                    android:textColor="@color/myst_black"
+                    android:textSize="14sp"
+                    android:paddingBottom="17dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="15dp"
+                    android:includeFontPadding="true"
+                    android:imeOptions="actionNext"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+               android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/txt_send_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="Send"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/round_corner_blue"
+                    android:textColor="@color/myst_white"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="35dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- app themes -->
+    <style name="XD.Theme.App" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="XD.Theme.App.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="XD.Theme.App.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="XD.Theme.App.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- text styles -->
+    <style name="WhiteAccent">
+        <item name="colorAccent">@color/color_blue</item> <!-- Whatever color you want-->
+    </style>
+    <!-- view styles -->
+
+</resources>

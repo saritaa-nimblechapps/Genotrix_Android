@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?><!-- non-translatable strings and aliases for literal translatable strings -->
+
+<resources>
+    <string name="app_name">Genotrix Cube1</string>
+
+    <!--    main activity-->
+    <string name="battery_voltage_title">Battery Voltage (V) : - </string>
+    <string name="rssl_title">RSSI : - </string>
+
+    <!--    Header title-->
+    <string name="home">Home</string>
+    <!--    Cover screen-->
+    <string name="scab_patient_id">Scan Patient Id</string>
+    <string name="scan_user_id">Scan User Id</string>
+    <string name="scan_regent_id">Scan Regent Id</string>
+    <string name="enter_user_id">Enter User Id</string>
+    <string name="enter_patient_id">Enter Patient Id</string>
+    <string name="enter_regent_id">Enter Regent Id</string>
+
+    <!--    home fragment-->
+
+    <!-- activity titles -->
+
+    <!-- menus -->
+
+    <!-- labels -->
+
+    <string name="myst_label_connect">Connect</string>
+    <string name="myst_label_connecting">Connecting</string>
+    <string name="myst_label_disconnecting">Disconnect</string>
+    <string name="myst_label_time">Time</string>
+    <string name="myst_label_transmittance">Transmittance</string>
+    <string name="myst_label_absorbance">Absorbance</string>
+    <string name="myst_label_note">Note</string>
+    <string name="myst_label_separate">SEPARATE</string>
+    <string name="myst_label_event">EVENT</string>
+    <string name="myst_label_no_reading">------</string>
+    <string name="myst_label_r">R</string>
+    <string name="myst_label_g">G</string>
+    <string name="myst_label_b">B</string>
+    <string name="myst_label_t">T</string>
+    <string name="myst_label_a">A</string>
+    <string name="myst_label_sampling_rate_one_second">1 Second</string>
+    <string name="myst_label_sampling_rate_five_seconds">5 Seconds</string>
+    <string name="myst_label_sampling_rate_thirty_seconds">30 Seconds</string>
+    <string name="myst_label_sampling_rate_two_minutes">2 Minutes</string>
+    <string name="myst_label_sampling_rate_thirty_minutes">30 Minutes</string>
+    <string name="myst_label_h">h</string>
+    <string name="myst_label_m">m</string>
+    <string name="myst_label_s">s</string>
+    <string name="myst_label_open_source_libraries">Open Source Libraries</string>
+    <string name="myst_label_open_source_libraries_blurb">This app makes use of the following libraries.</string>
+    <string name="myst_label_best_fit">Select points for Best Fit</string>
+    <string name="myst_label_graph_update_problem">Problem updating graph data</string>
+    <string name="myst_label_graph">Graph</string>
+    <string name="myst_label_csv">CSV</string>
+
+    <!-- hints -->
+
+    <string name="myst_hint_note">Add new note or x value</string>
+
+    <!-- formats -->
+
+    <string name="myst_format_three_dp">%1$.3f</string>
+    <string name="myst_format_percent">%1$.1f%%</string>
+    <string name="myst_format_seconds">%1$ds</string>
+    <string name="myst_format_minutes">%1$dm %2$ds</string>
+    <string name="myst_format_hours">%1$dh %2$dm %3$ds</string>
+    <string name="myst_format_modified">Modified: %1$s</string>
+    <string name="myst_format_build">Build: %1$s</string>
+    <string name="myst_format_best_fit_positive">Best Fit: y = %1$2.4fx + %2$2.4f</string>
+    <string name="myst_format_best_fit_negative">Best Fit: y = %1$2.4fx - %2$2.4f</string>
+    <string name="myst_format_save_success">%1$s saved successfully</string>
+    <string name="myst_format_save_failure">%1$s failed to save</string>
+
+    <!-- buttons -->
+
+    <string name="myst_button_calibrate">CALIBRATE</string>
+    <string name="myst_button_save">SAVE</string>
+    <string name="myst_button_sessions">SESSIONS</string>
+    <string name="myst_button_clear">CLEAR</string>
+
+    <!-- dialogs -->
+
+    <string name="myst_dialog_title_no_bluetooth">No Bluetooth</string>
+    <string name="myst_dialog_text_no_bluetooth">Your device does not appear to have Bluetooth which is required for this app.</string>
+
+    <string name="myst_dialog_title_devices">Devices</string>
+    <string name="myst_dialog_button_positive_devices">Disconnect</string>
+    <string name="myst_dialog_button_negative_devices">Cancel</string>
+
+    <string name="myst_dialog_title_rename_device">Rename Device</string>
+    <string name="myst_dialog_body_rename_device">Enter a name for this device and the password.</string>
+    <string name="myst_dialog_hint_password_rename_device">Password</string>
+    <string name="myst_dialog_button_positive_rename_device">Rename</string>
+    <string name="myst_dialog_button_negative_rename_device">Cancel</string>
+
+    <string name="myst_dialog_title_about">About App</string>
+    <string name="myst_dialog_button_negative_about">Close</string>
+
+    <string name="myst_dialog_title_frequency">Sampling Rate</string>
+    <string name="myst_dialog_button_positive_frequency">Select</string>
+    <string name="myst_dialog_button_negative_frequency">Cancel</string>
+
+    <string name="myst_dialog_title_duration">Select duration of capture</string>
+    <string name="myst_dialog_button_positive_duration">Capture</string>
+    <string name="myst_dialog_button_negative_duration">Cancel</string>
+
+    <string name="myst_dialog_title_log_removal">Remove unsaved logs?</string>
+    <string name="myst_dialog_body_log_removal">The current logs have not been saved, this action will remove them. Would you like to proceed?</string>
+    <string name="myst_dialog_button_positive_log_removal">Proceed</string>
+    <string name="myst_dialog_button_negative_log_removal">Cancel</string>
+
+    <string name="myst_dialog_title_edit_file">Rename file</string>
+    <string name="myst_dialog_body_edit_file">Please enter a name for this file</string>
+    <string name="myst_dialog_button_positive_edit_file">Rename</string>
+    <string name="myst_dialog_button_negative_edit_file">Cancel</string>
+
+    <string name="myst_dialog_title_delete_file">Delete file?</string>
+    <string name="myst_dialog_body_delete_file">Are you sure you wish to delete this file?</string>
+    <string name="myst_dialog_button_positive_delete_file">Yes</string>
+    <string name="myst_dialog_button_negative_delete_file">No</string>
+
+    <string name="myst_dialog_title_sessions">Sessions</string>
+    <string name="myst_dialog_button_negative_session">Cancel</string>
+
+    <!-- notification -->
+
+    <string name="myst_notification_title_duration_complete">@string/app_name</string>
+    <string name="myst_notification_text_duration_complete">Duration capture complete</string>
+
+    <!-- activities -->
+
+    <!-- fragments -->
+
+    <string name="myst_fragment_table">TABLE</string>
+    <string name="myst_fragment_graph">GRAPH</string>
+
+    <!-- Toasts -->
+
+    <string name="myst_toast_duration_no_device">Device connection required for duration feature</string>
+    <string name="myst_toast_duration_capture_started">Duration capture started</string>
+    <string name="myst_toast_duration_capture_cancelled">Duration capture cancelled</string>
+    <string name="myst_toast_device_name_change_success">Device name changed</string>
+    <string name="myst_toast_device_name_change_failure">Device name change failed</string>
+    <string name="myst_toast_file_saved">Log Saved</string>
+    <string name="myst_toast_file_save_permission_fail">Log cannot save without Storage permission</string>
+    <string name="myst_toast_file_rename_permission_fail">Log cannot be renamed without Storage permission</string>
+    <string name="myst_toast_file_loaded">Log Loaded</string>
+    <string name="myst_toast_file_load_fail">Log Load Failed</string>
+    <string name="myst_toast_connection_lost">Device Connection Lost</string>
+    <string name="myst_toast_email_failed">Failed to find email client on device</string>
+    <string name="calibrate_amp_next"><![CDATA[Calibrate & Next ->]]></string>
+    <string name="go_to_back"><![CDATA[<- Go to Back]]></string>
+    <string name="title_activity_cover">CoverActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- content descriptions -->
+</resources>

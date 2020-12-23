@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/myst_white">
+
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/ly_row_dialog_fileName"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <!--checkbox electric maintance-->
+        <RadioButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:button="@null"
+            android:checked="false"
+            android:layout_marginRight="10dp"
+            android:id="@+id/opt_row_check_record"
+            android:background="@drawable/checkbox_selector"/>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginRight="10dp"
+           android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/txt_row_patientidTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Patient#"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textColor="@color/color_blue"/>
+
+
+           <TextView
+               android:id="@+id/txt_row_dateTitle"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/roboto_medium"
+               android:text="Date"
+               android:textColor="@color/color_blue"
+               android:textSize="16sp"
+               android:textAlignment="textEnd"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintStart_toEndOf="@+id/txt_row_patientidTitle"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/txt_row_patientid"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:hint="123456"
+               android:fontFamily="@font/roboto_regular"
+               android:textSize="16sp"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:textColor="@color/color_blue"
+               app:layout_constraintTop_toBottomOf="@+id/txt_row_patientidTitle"/>
+
+
+           <TextView
+               android:id="@+id/txt_row_dateTime"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/roboto_regular"
+               android:hint="18-Dec_2020 03:09 pm"
+               android:textAlignment="textEnd"
+               android:textColor="@color/color_blue"
+               android:textSize="16sp"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toEndOf="@+id/txt_row_patientid"
+               app:layout_constraintTop_toBottomOf="@+id/txt_row_dateTitle" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <!--horizontal line layout-->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#E9EBF2"
+        />
+
+
+</LinearLayout>

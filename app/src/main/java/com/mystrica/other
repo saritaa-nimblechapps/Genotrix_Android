@@ -1,0 +1,62 @@
+ private fun openGpsEnableSetting() {
+        val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+        startActivityForResult(intent, Companion.REQUEST_ENABLE_GPS)
+    }
+
+//11 dec
+        override fun onServicesDiscovered(gatt: BluetoothGatt?, status: Int) {
+            super.onServicesDiscovered(gatt, status)
+
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+
+                if (gatt!!.services.isEmpty()) {
+                    Log.wtf(
+                        "printGattTable",
+                        "No service and characteristic available, call discoverServices() first?"
+                    )
+                    return
+                }
+                gatt!!.services.forEach { service ->
+                    val characteristicsTable = service.characteristics.joinToString(
+                        separator = "\n|--",
+                        prefix = "|--"
+                    ) { it.uuid.toString() }
+                    Log.wtf(
+                        "printGattTable",
+                        "\nService ${service.uuid}\nCharacteristics:\n$characteristicsTable"
+                    )
+                }
+
+
+
+
+
+            mystService = gatt?.getService(mainServiceUUID)
+
+            testCommontCharacteristic = mystService!!.getCharacteristic(Constant.MYSTERIA_CHARACTERISTIC_TEST_UUID)
+
+            setIRGreenLed()
+            }
+
+        }
+
+//
+
+//    private fun getAllCharteristice(): ArrayList<Any>? {
+//        servicesOnDevice(device)?.flatMap { service-> service.characteristics?: listOf() }?.let {
+//            characteristics!!.add(
+//                it
+//            )
+//        }
+//
+//        return characteristics
+//    }
+
+
+/// testing add data
+                // add data to csv
+//                val data1 = listOf("0", "0.9632", txtPatentid!!.text,txtRegentid!!.text,
+//                                                txtUserid!!.text,txtsubtype!!.text,txt_testPerformed!!.text,txt_test_date_time!!.text,
+//                                                txt_qcPerformed!!.text,txt_qc_last_date_time!!.text,txt_reaction_duration!!.text,txt_interval!!.text,
+//                                                txtQc_perform_flag!!.text,txt_sample_add_date_time!!.text,txt_acquisition_date_time!!.text,txt_sample_ok!!.text,txtDeviceName!!.text,
+//                                                txtSoftwareVersion!!.text,filename)

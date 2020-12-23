@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/myst_text_view_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/myst_view_device_list_item_padding"
+        android:textColor="@color/myst_text_black"/>
+
+    <ImageView
+        android:id="@+id/myst_image_view_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/myst_list_item_icon_large_margin"
+        android:padding="@dimen/myst_list_item_icon_padding"
+        android:src="@drawable/myst_icon_edit"
+        android:visibility="gone"/>
+
+</RelativeLayout>

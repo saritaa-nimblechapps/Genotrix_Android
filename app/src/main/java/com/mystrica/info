@@ -1,0 +1,50 @@
+https://stackoverflow.com/questions/22984696/storing-array-list-object-in-sharedpreferences
+https://stackoverflow.com/questions/28107647/how-to-save-listobject-to-sharedpreferences
+
+//blu. docs link
+https://drive.google.com/file/d/1zdqY30n2jlX4RXSyfjafVsNQF3q_JcnH/view
+
+//ui link
+https://www.figma.com/file/teGQWqDMGzMnRTGsHtmKez/Covid-19-Test?node-id=0%3A1
+
+//BLuetoothGatt char. rules
+https://stackoverflow.com/questions/47097298/android-ble-bluetoothgatt-writedescriptor-return-sometimes-false/47103533#47103533
+
+
+//own counter link
+https://stackoverflow.com/questions/26113360/add-countdown-timer-in-application
+
+//char use
+https://medium.com/@leelaprasad4648/creating-linechart-using-mpandroidchart-33632324886d
+
+//timer ref.
+https://stackoverflow.com/questions/17620641/countdowntimer-in-minutes-and-seconds
+
+//barcode and qr code scanner reader
+https://github.com/yuriy-budiyev/code-scanner
+
+// location toggle on
+https://stackoverflow.com/questions/25175522/how-to-enable-location-access-programmatically-in-android
+
+//int to byte , byte to ing( array convert)
+https://stackoverflow.com/questions/1086054/how-to-convert-int-to-byte
+
+//circuler progrss
+https://stackoverflow.com/questions/14688117/how-to-make-circle-custom-progress-bar-in-android
+
+//calibrate and set led ios value
+Set LED:
+
+▿ 4 elements
+  - 0 : 1
+  - 1 : 144
+  - 2 : 0
+  - 3 : 0
+
+  Calibrate:
+
+  ▿ 4 elements
+    - 0 : 0
+    - 1 : 144
+    - 2 : 0
+    - 3 : 0

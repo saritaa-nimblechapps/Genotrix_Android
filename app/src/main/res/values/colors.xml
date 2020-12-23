@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- generic -->
+    <color name="myst_background_green">#009688</color>
+    <color name="myst_background_white">#FFFFFF</color>
+
+    <color name="myst_background_light_red">#F8DCDA</color>
+    <color name="myst_background_light_green">#C5E7E4</color>
+    <color name="myst_background_light_blue">#CBD0EB</color>
+
+    <color name="myst_text_green">#009688</color>
+    <color name="myst_text_black">#2D2D2D</color>
+    <color name="myst_text_dark_grey">#0F6159</color>
+    <color name="myst_text_grey">#8B8B8B</color>
+    <color name="myst_text_white">#FFFFFF</color>
+
+    <color name="myst_white_50">#80FFFFFF</color>
+    <color name="myst_white">#FFFFFF</color>
+
+    <color name="myst_red">#FF0000</color>
+    <color name="myst_green">#00b386</color>
+    <color name="myst_blue">#007DFF</color>
+    <color name="myst_grey">#DBDBDB</color>
+    <color name="myst_black">#000000</color>
+    <color name="myst_yellow">#FFFF8C</color>
+    <color name="myst_orange">#ff9900</color>
+    <color name="myst_light_purple">#4d4dff</color>
+
+    <!-- transparencies (suffixes in %) -->
+    <color name="xd_transparent_0">#00000000</color>
+    <color name="xd_transparent_10">#1A000000</color>
+    <color name="xd_transparent_20">#33000000</color>
+    <color name="xd_transparent_30">#4D000000</color>
+    <color name="xd_transparent_40">#66000000</color>
+    <color name="xd_transparent_50">#80000000</color>
+    <color name="xd_transparent_60">#99000000</color>
+    <color name="xd_transparent_70">#B3000000</color>
+    <color name="xd_transparent_80">#CC000000</color>
+    <color name="xd_transparent_90">#E6000000</color>
+
+    <color name="color_blue">#2D4C88</color>
+    <color name="color_blue_light">#2D9CDB</color>
+    <color name="color_light_blue">#ABBFE4</color>
+    <color name="color_dark_gry">#828282</color>
+    <color name="colorBtnDisable">#A1A8AC</color>
+    <color name="color_grey">#4F4F4F</color>
+    <color name="color_text_grey">#D8D8D8</color>
+    <color name="color_bg_grey">#F2F2F2</color>
+    <color name="color_light_bg_grey">#F2F2F2</color>
+    <color name="color_red">#EB5757</color>
+    <color name="color_green">#27AE60</color>
+    <color name="color_yewllow">#F2C94C</color>
+
+
+
+</resources>

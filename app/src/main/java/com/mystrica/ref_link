@@ -1,0 +1,72 @@
+//rounded corner progress bar
+https://github.com/akexorcist/RoundCornerProgressBar
+https://github.com/saisasanksunkavalli/RoundedHorizontalProgressBar
+
+
+//progress work link
+https://www.journaldev.com/9629/android-progressbar-example
+https://www.journaldev.com/9629/android-progressbar-example
+
+
+//method call
+https://stackoverflow.com/questions/12659747/call-an-activity-method-from-a-fragment
+
+
+//bar ref code scann exaple
+https://www.journaldev.com/18198/qr-code-barcode-scanner-android
+https://www.javatpoint.com/android-qr-code-or-bar-code-scanner
+
+
+//fragment back counter
+https://stackoverflow.com/questions/38473301/how-to-go-back-to-previous-fragment-when-hardware-back-button-is-pressed
+
+
+//fragment inside fragment display
+https://stackoverflow.com/questions/6672066/fragment-inside-fragment
+
+//online timer
+https://www.online-stopwatch.com/timer/2minutes/
+
+
+//cart view
+https://github.com/zabi90/ShoppingCart
+
+custom view create : https://github.com/himanshu-soni/QuantityView
+
+
+//timer event
+https://stackoverflow.com/questions/17808935/android-converting-minutes-and-seconds-to-millisecond
+
+//auto locatio useing api
+https://stackoverflow.com/questions/4721449/how-can-i-enable-or-disable-the-gps-programmatically-on-android
+
+//android 10
+https://stackoverflow.com/questions/23532740/android-bluetooth-le-onlescan-is-not-called
+-- https://stackoverflow.com/questions/21515885/onlescan-never-gets-called-android
+--- location enable-- https://stackoverflow.com/questions/58428763/android-10-not-working-with-ble-bluetooth-scanning
+
+//byte converte issue
+----- https://stackoverflow.com/questions/9854166/declaring-an-unsigned-int-in-java
+----- https://guava.dev/releases/20.0/api/docs/com/google/common/primitives/package-summary.html
+----- https://github.com/google/guava
+----- kotlin --- https://stackoverflow.com/questions/38651192/how-to-correctly-handle-byte-values-greater-than-127-in-kotlin
+
+//ble char. service
+------ https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/bluetooth/BluetoothGattCharacteristic.java
+------ https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/bluetooth/BluetoothGattCharacteristic.java
+------ https://developer.android.com/guide/topics/connectivity/bluetooth-le#connect
+------ https://github.com/devunwired/accessory-samples/blob/master/BluetoothGatt/src/com/example/bluetoothgatt/MainActivity.java
+------ https://punchthrough.com/android-ble-guide/
+------ https://punchthrough.com/introducing-lightblue-explorer-for-android/    ( blog )
+
+//connection lost some times
+----  https://stackoverflow.com/questions/17870189/android-4-3-bluetooth-low-energy-unstable
+
+
+//byte to int convert
+----- https://stackoverflow.com/questions/9581530/converting-from-byte-to-int-in-java
+
+//file create
+https://www.geeksforgeeks.org/writing-a-csv-file-in-java-using-opencsv/
+https://github.com/Krishnasony/Import_Export_CSV_File-Android_Kotlin
+https://github.com/Krishnasony/Import_Export_CSV_File-Android_Kotlin

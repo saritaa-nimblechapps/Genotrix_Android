@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.WarmupFragment">
+
+    <TextView
+        android:id="@+id/txtSkipWarmUp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Skip"
+        android:visibility="visible"
+        android:gravity="center_vertical"
+        android:background="@drawable/round_corner_blue"
+        android:textColor="@color/myst_white"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"/>
+
+    <TextView
+        android:id="@+id/txtTitleLastDate_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Qc Date Time"
+        android:textSize="18sp"
+        android:textColor="@color/color_blue"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtSkipWarmUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/txtLastDate_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleLastDate_time"
+        app:layout_constraintStart_toStartOf="@+id/txtTitleLastDate_time"
+        android:hint="Last Qc Date Time"
+        android:textSize="18sp"
+        android:textColor="@color/myst_black"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastDate_time"
+        app:layout_constraintBottom_toTopOf="@+id/txtStartQc">
+
+        <ProgressBar
+            android:id="@+id/prg_qc"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:indeterminate="false"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/rounded_corner_progress" />
+
+
+        <TextView
+            android:id="@+id/txtQc_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:textColor="@color/color_blue"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/txtStartQc"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="START DEVICE WARM UP"
+        android:visibility="visible"
+        android:gravity="center_vertical"
+        android:background="@drawable/round_corner_blue"
+        android:textColor="@color/myst_white"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
