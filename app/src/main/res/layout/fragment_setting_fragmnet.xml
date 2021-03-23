@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guid_covid_txt_top"
+        android:id="@+id/guid_txt_top"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -48,10 +48,11 @@
         android:text="Current User"
         android:textColor="@color/color_blue"
         android:textSize="18sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/guide_vertical_ninety_forgot_password"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
-        app:layout_constraintTop_toBottomOf="@+id/guid_covid_txt_top" />
+        app:layout_constraintTop_toBottomOf="@+id/guid_txt_top" />
 
     <TextView
         android:id="@+id/txt_current_user_id4setting"
@@ -62,6 +63,7 @@
         android:text="Current User"
         android:textColor="@color/color_grey"
         android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/guide_vertical_ninety_forgot_password"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
@@ -74,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:gravity="right"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/guide_vertical_ninety_forgot_password"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
@@ -98,6 +101,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="15dp"
+        android:visibility="gone"
         android:background="@color/color_grey"
         app:layout_constraintEnd_toEndOf="@+id/guide_vertical_ninety_forgot_password"
         app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
@@ -126,6 +130,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Interval Section"
+                android:visibility="gone"
                 android:textColor="@color/color_blue"
                 android:textSize="18sp"
               />
@@ -137,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Test duration in Minutes"
+                android:text="Reaction time(in Minites)"
                 android:textColor="@color/color_blue"
                 android:textSize="16sp"
                />
@@ -149,35 +154,64 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/ly_add_mins"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corner_blue_left">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:id="@+id/ly_add_mins"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_blue"/>
+
+                    <LinearLayout
+                        android:id="@+id/ly_add_mintes"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
 
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:background="@color/myst_white"
                     android:gravity="center">
 
                     <TextView
@@ -194,26 +228,6 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/ly_add_mintes"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="+"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
             </LinearLayout>
 
             <TextView
@@ -222,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Time interval in Seconds"
+                android:text="Interval (in Seconds)"
                 android:textColor="@color/color_blue"
                 android:textSize="16sp"
                  />
@@ -238,31 +252,59 @@
                >
 
                 <LinearLayout
-                    android:id="@+id/ly_sec_mins"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corner_blue_left">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:id="@+id/ly_sec_mins"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_blue"/>
+
+                    <LinearLayout
+                        android:id="@+id/ly_add_second"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:background="@color/myst_white"
                     android:gravity="center">
 
                     <TextView
@@ -275,30 +317,11 @@
                         android:padding="2dp"
                         android:text="1"
                         android:textColor="@color/color_grey"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
-
-                <LinearLayout
-                    android:id="@+id/ly_add_second"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="+"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
             </LinearLayout>
 
             <TextView
@@ -307,7 +330,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Estimated reaction point (in minutes)"
+                android:text="Estimated reaction point (in Minutes)"
                 android:textColor="@color/color_blue"
                 android:textSize="16sp"
                />
@@ -323,31 +346,60 @@
                 >
 
                 <LinearLayout
-                    android:id="@+id/ly_recation_mins"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corner_blue_left">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:id="@+id/ly_recation_mins"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_blue"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/ly_add_reaction"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:background="@color/myst_white"
                     android:gravity="center">
 
                     <TextView
@@ -365,25 +417,6 @@
 
                 </LinearLayout>
 
-
-                <LinearLayout
-                    android:id="@+id/ly_add_reaction"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="+"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
             </LinearLayout>
 
             <TextView
@@ -407,30 +440,62 @@
                 >
 
                 <LinearLayout
-                    android:id="@+id/ly_drops_mins"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corner_blue_left">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:id="@+id/ly_drops_mins"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_blue"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/ly_add_drops"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/color_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:background="@color/myst_white"
                     android:gravity="center">
 
                     <TextView
@@ -441,31 +506,13 @@
                         android:gravity="center"
                         android:maxLines="1"
                         android:padding="2dp"
-                        android:text="1"
+                        android:text="3"
                         android:textColor="@color/color_grey"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/ly_add_drops"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@color/color_blue"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="center"
-                        android:text="+"
-                        android:textColor="@color/myst_white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
@@ -482,6 +529,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="right"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/guide_vertical_ninety_forgot_password"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"

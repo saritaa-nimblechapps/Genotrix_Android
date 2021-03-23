@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="15dp"
                 android:padding="5dp"
-                android:text="Log out"
+                android:text="Logout"
                 android:visibility="gone"
                 android:fontFamily="@font/roboto_bold"
                 android:textSize="14sp"

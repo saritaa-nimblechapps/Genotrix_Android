@@ -10,13 +10,14 @@
     <!--    Header title-->
     <string name="home">Home</string>
     <!--    Cover screen-->
-    <string name="scab_patient_id">Scan Patient Id</string>
-    <string name="scan_user_id">Scan User Id</string>
-    <string name="scan_regent_id">Scan Regent Id</string>
-    <string name="enter_user_id">Enter User Id</string>
-    <string name="enter_patient_id">Enter Patient Id</string>
-    <string name="enter_regent_id">Enter Regent Id</string>
+    <string name="scab_patient_id">Scan Patient ID</string>
+    <string name="scan_user_id">Scan User ID</string>
+    <string name="scan_regent_id">Scan Reagent ID</string>
+    <string name="enter_user_id">Enter User ID</string>
+    <string name="enter_patient_id">Enter Patient ID</string>
+    <string name="enter_regent_id">Enter Reagent ID</string>
 
+    <string name="warm_up_completed">Warm Up Completed!</string>
     <!--    home fragment-->
 
     <!-- activity titles -->
@@ -55,23 +56,26 @@
     <string name="myst_label_graph">Graph</string>
     <string name="myst_label_csv">CSV</string>
 
+    <!--    connect error -->
+    <string name="connect_error">Connection error please try to reconnect</string>
+
     <!-- hints -->
 
     <string name="myst_hint_note">Add new note or x value</string>
 
     <!-- formats -->
 
-    <string name="myst_format_three_dp">%1$.3f</string>
-    <string name="myst_format_percent">%1$.1f%%</string>
-    <string name="myst_format_seconds">%1$ds</string>
-    <string name="myst_format_minutes">%1$dm %2$ds</string>
-    <string name="myst_format_hours">%1$dh %2$dm %3$ds</string>
-    <string name="myst_format_modified">Modified: %1$s</string>
-    <string name="myst_format_build">Build: %1$s</string>
-    <string name="myst_format_best_fit_positive">Best Fit: y = %1$2.4fx + %2$2.4f</string>
-    <string name="myst_format_best_fit_negative">Best Fit: y = %1$2.4fx - %2$2.4f</string>
-    <string name="myst_format_save_success">%1$s saved successfully</string>
-    <string name="myst_format_save_failure">%1$s failed to save</string>
+<!--    <string name="myst_format_three_dp">%1$.3f</string>-->
+<!--    <string name="myst_format_percent">%1$.1f%%</string>-->
+<!--    <string name="myst_format_seconds">%1$ds</string>-->
+<!--    <string name="myst_format_minutes">%1$dm %2$ds</string>-->
+<!--    <string name="myst_format_hours">%1$dh %2$dm %3$ds</string>-->
+<!--    <string name="myst_format_modified">Modified: %1$s</string>-->
+<!--    <string name="myst_format_build">Build: %1$s</string>-->
+<!--    <string name="myst_format_best_fit_positive">Best Fit: y = %1$2.4fx + %2$2.4f</string>-->
+<!--    <string name="myst_format_best_fit_negative">Best Fit: y = %1$2.4fx - %2$2.4f</string>-->
+<!--    <string name="myst_format_save_success">%1$s saved successfully</string>-->
+<!--    <string name="myst_format_save_failure">%1$s failed to save</string>-->
 
     <!-- buttons -->
 
@@ -81,6 +85,23 @@
     <string name="myst_button_clear">CLEAR</string>
 
     <!-- dialogs -->
+    <string name="genotrix_app_locationd_decs">Genotix cube to access the device location needs to connect other device .</string>
+    <string name="genotrix_app_locationd_title">Loaction access required</string>
+
+<!--    Location Access Required-->
+
+
+<!--    Genotix Cube requires you to enable your device location by going to Settings > Security & Location> Location > On. Your location will be shared only while using the app.-->
+
+
+    <string name="enable_ble">Enable Bluetooth!</string>
+    <string name="enable_pre">Enable Permission</string>
+    <string name="genotrix_enable_blu_title">Enable Bluetooth Settings</string>
+    <string name="genotrix_enable_blu_desc">Genotix Cube requests you to enable your Bluetooth settings to pair with other devices.</string>
+<!--    Enable Bluetooth Settings-->
+
+<!--    Genotix Cube requests you to enable your Bluetooth settings to pair with other devices.-->
+
 
     <string name="myst_dialog_title_no_bluetooth">No Bluetooth</string>
     <string name="myst_dialog_text_no_bluetooth">Your device does not appear to have Bluetooth which is required for this app.</string>
@@ -165,5 +186,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="no_chart_data">No chart data available.</string>
     <!-- content descriptions -->
 </resources>

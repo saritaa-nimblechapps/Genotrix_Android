@@ -1,5 +1,4 @@
-package com.mystrica
-
+package com.genotrixcube
 import org.junit.Test
 
 import org.junit.Assert.*

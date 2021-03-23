@@ -1,14 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.HistoryFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HistoryFragment"
+    android:background="@color/myst_white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+   <LinearLayout
+       android:id="@+id/ly_search"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginRight="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="15dp"
+       app:layout_constraintTop_toTopOf="parent">
+
+       <!-- start date layout-->
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginRight="5dp">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_weight="1"
+               android:layout_gravity="center_vertical"
+               android:gravity="center_vertical"
+               android:padding="7dp"
+               android:background="@drawable/round_blue">
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_marginLeft="5dp"
+                   android:src="@android:drawable/ic_menu_search"/>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="40dp"
+                   android:layout_weight="1"
+                   android:isScrollContainer="true"
+                   android:textColorHint="@color/myst_black"
+
+                   >
+
+                   <androidx.appcompat.widget.AppCompatEditText
+                       android:id="@+id/edt_search_id"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:inputType="text"
+                       android:background="@null"
+                       android:backgroundTint="@color/myst_white"
+                       android:textColor="@color/color_grey"
+                       android:textSize="14sp"
+                       android:paddingRight="10dp"
+                       android:paddingLeft="15dp"
+                       android:includeFontPadding="true"
+                       android:fontFamily="@font/roboto_medium"
+                       android:singleLine = "true"
+                       android:imeOptions="actionNext"
+                       android:hint="Patient#, User#, Reagent#"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <ImageView
+                   android:id="@+id/img_search_cross"
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:padding="5dp"
+                   android:src="@drawable/clear"/>
+           </LinearLayout>
+
+
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/img_scan_search"
+               android:layout_width="70dp"
+               android:layout_height="match_parent"
+               android:src="@drawable/scan"
+               android:padding="10dp"/>
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_date"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/ly_search"
+       >
 
-</FrameLayout>
+
+<!-- start date layout-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_blue"
+            android:layout_marginRight="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:isScrollContainer="true"
+                android:textColorHint="@color/myst_black"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:backgroundTint="@color/myst_white"
+                    android:textColor="@color/color_grey"
+                    android:textSize="12sp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="15dp"
+                    android:focusable="false"
+                    android:includeFontPadding="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:singleLine = "true"
+                    android:imeOptions="actionNext"
+                    android:editable="false"
+                    android:clickable="true"
+                    android:hint="Start date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+<!--        end date layout-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/round_blue"
+            android:layout_marginRight="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:isScrollContainer="true"
+                android:textColorHint="@color/myst_black"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:backgroundTint="@color/myst_white"
+                    android:textColor="@color/color_grey"
+                    android:textSize="12sp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="15dp"
+                    android:focusable="false"
+                    android:includeFontPadding="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:singleLine = "true"
+                    android:imeOptions="actionNext"
+                    android:editable="false"
+                    android:clickable="true"
+                    android:hint="End date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+<!--        clear layout-->
+        <LinearLayout
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_selector"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="CLEAR"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/myst_white"
+                android:enabled="true"
+               />
+
+        </LinearLayout>
+    </LinearLayout>
+
+<!-- data list recylcer view layout-->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ly_date"
+        app:layout_constraintBottom_toTopOf="@+id/btn_export_multiple_csv"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/record_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+
+
+        <TextView
+            android:id="@+id/txt_list_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_blue"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+
+
+    </RelativeLayout>
+
+<!-- export csv layout-->
+    <Button
+        android:id="@+id/btn_export_multiple_csv"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="EXPORT CSV"
+        android:gravity="center_vertical"
+        android:background="@drawable/button_selector"
+        android:textColor="@color/myst_white"
+        android:enabled="false"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

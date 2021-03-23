@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: me.himanshusoni.quantityview:quantity-view:1.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce0a54e9e2f31257e7808cea2d8effc6/jetified-quantity-view-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce0a54e9e2f31257e7808cea2d8effc6/jetified-quantity-view-1.2.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.himanshusoni.quantityview/quantity-view/1.2.0/14f6a2b85f5023b91c1353dbc5847ebf2fb0b41d/quantity-view-1.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.himanshusoni.quantityview/quantity-view/1.2.0/cd0791b81932d1fb2632cdc1178f6ad6630b7435/quantity-view-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

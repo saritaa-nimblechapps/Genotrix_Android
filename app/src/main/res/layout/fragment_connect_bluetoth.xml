@@ -2,6 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/lyMainCollect"
+    android:keepScreenOn="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/myst_white">
 
@@ -35,12 +37,52 @@
         />
 
     <LinearLayout
+        android:id="@+id/ly_start_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_blue_text_connecty">
+
+        <TextView
+            android:id="@+id/txt_start_test_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Press 'START' to start the Test"
+            android:textColor="@color/color_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="left|center_vertical"
+            />
+
+        <Button
+            android:id="@+id/txt_start"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="START"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/button_selector"
+            android:textColor="@color/myst_white"
+            android:enabled="true"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/round_blue"
-        app:layout_constraintTop_toBottomOf="@+id/txt_blue_text_connecty"
+        app:layout_constraintTop_toBottomOf="@+id/ly_start_test"
         app:layout_constraintBottom_toTopOf="@+id/ly_pr_timer"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
@@ -49,17 +91,16 @@
         android:padding="10dp"
         android:orientation="vertical">
 
-
-<!--        <com.github.mikephil.charting.charts.LineChart-->
-<!--            android:id="@+id/chart"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:isScrollContainer="true"-->
-<!--            android:background="@color/myst_white"-->
-<!--            android:scrollbars="horizontal"-->
-<!--            android:visibility="gone"/>-->
-
-
+        <TextView
+            android:id="@+id/txt_no_chart_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_chart_data"
+            android:layout_centerInParent="true"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="@color/color_grey"
+            android:fontFamily="@font/roboto_regular"/>
 
             <FrameLayout
                 android:id="@+id/graph_container"
@@ -68,72 +109,9 @@
 
 
 
-    </LinearLayout>
-
-<!--    <ScrollView-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:background="@drawable/round_blue"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/txt_blue_text_connecty"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ly_pr_timer"-->
-<!--        android:layout_marginRight="25dp"-->
-<!--        android:layout_marginLeft="25dp"-->
-<!--        android:layout_marginTop="25dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:padding="10dp">-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical"-->
-<!--            >-->
+    </RelativeLayout>
 
 
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/ly_value_of_result"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:visibility="gone"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/recy_sample_list"-->
-<!--                    android:paddingLeft="15dp"-->
-<!--                    android:paddingRight="15dp"-->
-<!--                    android:paddingBottom="15dp"-->
-<!--                    android:nestedScrollingEnabled="false"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    />-->
-
-<!--            </RelativeLayout>-->
-
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/luy_round_courner_container"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:visibility="visible"-->
-
-<!--                >-->
-
-<!--                <com.github.mikephil.charting.charts.LineChart-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent" />-->
-
-<!--            </RelativeLayout>-->
-
-<!--        </LinearLayout>-->
-<!--    </ScrollView>-->
-
-
-<!-- custom horizontal progress bar -->
     <LinearLayout
         android:id="@+id/ly_pr_timer"
         android:layout_width="match_parent"
@@ -206,13 +184,14 @@
             android:paddingLeft="35dp"
             android:paddingRight="35dp"/>
 
-        <TextView
+        <Button
             android:id="@+id/txt_connect"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
-            android:text="Connect"
+            android:text="VIEW RESULT"
+            android:enabled="false"
             android:gravity="center_vertical"
-            android:background="@drawable/round_corner_blue"
+            android:background="@drawable/button_selector"
             android:textColor="@color/myst_white"
             android:paddingLeft="35dp"
             android:paddingRight="35dp"/>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounder_corner_white">
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/txt_dialog_disconnect_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@null"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:backgroundTint="@color/myst_white"
+            android:textColor="@color/myst_black"
+            android:textSize="18sp"
+            android:text="Disconnected!!"
+            android:paddingBottom="17dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="15dp"
+            android:includeFontPadding="true"
+            android:fontFamily="@font/roboto_medium"
+            android:singleLine = "true"
+            />
+
+
+    <TextView
+        android:id="@+id/txt_dialog_disconnect_device_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:backgroundTint="@color/myst_white"
+        android:textColor="@color/myst_black"
+        android:textSize="16sp"
+        android:text="Please connect device and try again!"
+        android:paddingBottom="17dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="15dp"
+        android:includeFontPadding="true"
+        android:fontFamily="@font/roboto_regular"
+        android:singleLine = "true"
+        android:layout_below="@+id/txt_dialog_disconnect_device"
+        />
+
+
+    <!--horizontal layout-->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:layout_below="@+id/txt_dialog_disconnect_device_message"
+        android:background="#E9EBF2"
+        android:id="@+id/view_dialog__logout_hor"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/view_dialog__logout_hor">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/txt_dialog_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="OK"
+                android:background="@color/myst_white"
+                android:visibility="visible"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/color_blue"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

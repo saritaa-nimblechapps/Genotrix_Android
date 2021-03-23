@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fromDegrees="120"
+    android:fromDegrees="360"
     android:pivotX="80%"
     android:pivotY="80%"
-    android:toDegrees="140">
+    android:toDegrees="0">
     <item android:id="@android:id/background">
         <shape
             android:innerRadiusRatio="3"
@@ -11,22 +11,22 @@
             android:useLevel="false"
             android:angle="0"
             android:type="sweep"
-            android:thicknessRatio="80.0">
+            android:thicknessRatio="100.0">
             <solid android:color="@color/color_blue"/>
         </shape>
 
     </item>
     <item android:id="@android:id/progress">
         <rotate
-            android:fromDegrees="120"
-            android:toDegrees="120">
+            android:fromDegrees="360"
+            android:toDegrees="0">
             <shape
                 android:innerRadiusRatio="3"
                 android:shape="ring"
                 android:angle="0"
                 android:type="sweep"
-                android:thicknessRatio="80.0">
-                <solid android:color="#ffffff"/>
+                android:thicknessRatio="100.0">
+                <solid android:color="@color/color_text_grey"/>
             </shape>
         </rotate>
     </item>

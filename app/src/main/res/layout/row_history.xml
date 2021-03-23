@@ -13,7 +13,7 @@
         android:padding="10dp">
 
         <!--checkbox electric maintance-->
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatCheckBox
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:gravity="center_vertical"
@@ -24,6 +24,7 @@
             android:background="@drawable/checkbox_selector"/>
 
        <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/ly_patient_id_date"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="horizontal"
@@ -64,7 +65,7 @@
                android:fontFamily="@font/roboto_regular"
                android:textSize="16sp"
                app:layout_constraintLeft_toLeftOf="parent"
-               android:textColor="@color/color_blue"
+               android:textColor="@color/myst_black"
                app:layout_constraintTop_toBottomOf="@+id/txt_row_patientidTitle"/>
 
 
@@ -75,7 +76,7 @@
                android:fontFamily="@font/roboto_regular"
                android:hint="18-Dec_2020 03:09 pm"
                android:textAlignment="textEnd"
-               android:textColor="@color/color_blue"
+               android:textColor="@color/myst_black"
                android:textSize="16sp"
                app:layout_constraintRight_toRightOf="parent"
                app:layout_constraintEnd_toEndOf="parent"

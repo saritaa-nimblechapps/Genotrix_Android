@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sclyforgot"
+    android:id="@+id/scresult"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/myst_white"
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:background="@color/myst_white"
+        android:id="@+id/ly_result_data"
         android:descendantFocusability="beforeDescendants"
         android:focusable="false"
         android:focusableInTouchMode="true"
@@ -39,12 +40,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guid_covid_txt_top"
+            android:id="@+id/guid_txt_top_result"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_percent="0.05"
+            app:layout_constraintGuide_percent="0.03"
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -53,14 +54,14 @@
             android:layout_height="wrap_content"
             android:gravity="left"
             android:paddingRight="10dp"
-            android:text="Covid-19"
+            android:hint="title"
             android:textColor="@color/color_blue"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="visible"
             app:layout_constraintEnd_toStartOf="@+id/txt_print"
             app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
-            app:layout_constraintTop_toBottomOf="@+id/guid_covid_txt_top" />
+            app:layout_constraintTop_toBottomOf="@+id/guid_txt_top_result" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txt_print"
@@ -83,6 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
+            android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/guide_vertical_ninety_forgot_password"
             app:layout_constraintStart_toEndOf="@+id/guide_vertical_ten_forgot_password"
             app:layout_constraintTop_toBottomOf="@+id/txt_result_tilte">
@@ -189,7 +191,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:gravity="center_vertical"
-                android:text="Test Data"
+                android:text="Result Sample Data"
                 android:fontFamily="@font/roboto_bold"
                 android:textColor="@color/color_blue"
                 android:textSize="14sp" />
@@ -198,6 +200,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:visibility="gone"
                 android:layout_marginTop="10dp">
 
                 <TextView
@@ -236,7 +239,8 @@
                 android:id="@+id/recy_result4ValueSeconds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"/>
+                android:layout_marginTop="5dp"
+                android:visibility="visible"/>
 
 <!--            device id details layout-->
             <LinearLayout
@@ -249,12 +253,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
                     android:gravity="left"
-                    android:text="Device Id"
+                    android:text="Device ID"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_device4result"
@@ -265,7 +269,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -281,12 +285,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="Software Version"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_softwareVersiond4result"
@@ -297,7 +301,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -313,12 +317,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
-                    android:text="User Id"
+                    android:text="User ID"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_userid4result"
@@ -329,7 +333,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -345,12 +349,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
-                    android:text="Patient id"
+                    android:text="Patient ID"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_patinetid4result"
@@ -361,7 +365,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -377,12 +381,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
-                    android:text="Regent Id"
+                    android:text="Regent ID"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_regentid4reslut"
@@ -393,7 +397,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
@@ -409,12 +413,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="Sample Type"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_sub_type4result"
@@ -425,7 +429,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -441,12 +445,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="Test Performed"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_testPerfomed4result"
@@ -457,7 +461,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
@@ -473,12 +477,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
-                    android:text="Testing Date and time "
+                    android:text="Testing Date and Time "
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_test_date_time4result"
@@ -489,7 +493,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -505,12 +509,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
-                    android:text="QC performed "
+                    android:text="QC Performed "
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_qcPerformed4result"
@@ -521,7 +525,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
@@ -537,12 +541,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="Last QC Date and Time"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_last_qc_time4result"
@@ -553,7 +557,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -569,12 +573,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="Reaction Duration"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_reaction_duration4result"
@@ -585,7 +589,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -601,12 +605,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="Intervals"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_intervals4result"
@@ -617,7 +621,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
@@ -633,12 +637,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="End of Process Flag"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_process_flag4result"
@@ -649,7 +653,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -665,12 +669,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
                     android:text="Sample Addition Date and Time"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_sample_add_date_time4result"
@@ -681,7 +685,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -698,12 +702,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
-                    android:text="Acquisition start date and time"
+                    android:text="Acquisition Start Date and Time"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_acquisition_date_time4result"
@@ -714,7 +718,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -730,12 +734,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="left"
-                    android:text="sample addition/reaction started by pressing ok"
+                    android:text="Sample Addition/Reaction Started by Pressing OK"
                     android:layout_weight="1"
                     android:textColor="@color/color_blue"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/txt_sample_ok_time4result"
@@ -746,7 +750,7 @@
                     android:text="12"
                     android:layout_weight="1"
                     android:textColor="@color/color_grey"
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
